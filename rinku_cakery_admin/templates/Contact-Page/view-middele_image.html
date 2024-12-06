@@ -1,0 +1,56 @@
+
+{% extends "base.html" %} {% load static %} {% block content %}
+
+        <!-- main-content -->
+        <div class="main-content">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12">
+                    <div class="panel mb-g">
+                        <div class="panel-heading">
+                            <h3>View Contact Page Middele Image</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="ecommerce-table">
+                                <div class="table-top-control mb-g">
+                                    <center><div class="col-sm-6" id="tableRowConut" ></div></center>
+                                    <div class="col-sm-6" id="tableSearch" hidden></div>
+                                </div>
+                                <table id="myTable" class="table data-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Image</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                       {% for cm in contact_middele_img %} 
+                                        <tr>
+                                            <td>{{cm.id}}</td>
+                                            <td>
+                                                <img src="{{cm.contact_middle_img.url}}" alt="{{ cm.contact_middle_img }}">
+                                                
+                                            </td>
+                                        
+                                            <td>
+                                                <div class="btn-box">
+                                                    <a href="/update_contact_middele_img/{{ cm.id }}" class="text-white btn btn-sm btn-success"><i class="bi bi-pencil-square"></a></i>
+                                                    <a href="/delete_contact_middele_img/{{ cm.id }}" class="text-white btn btn-sm btn-danger"><i class="bi bi-trash"></a></i>
+                                                        
+                                                </div>
+                                            </td>
+                                        </tr>
+                                       {% endfor %}
+                                        
+                                        
+                                    </tbody>
+                                </table>
+                                <div class="table-bottom-control"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main-content -->
+        {% endblock %}

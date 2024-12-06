@@ -1,0 +1,170 @@
+
+{% extends "base.html" %} {% load static %} {% block content %}
+
+
+<!-- main-content -->
+<div class="main-content">
+    <div class="row">
+        <div class="">
+            <div class="panel mb-g justify-item-center">
+
+                <div class="panel-heading">
+                    <h3> View Order Full Details For {{ user_profile.username }} </h3>
+                </div>
+
+                <div class="panel-body">
+
+                    <div class="ecommerce-table">
+
+                        <div class="table-top-control mb-g " hidden>
+                            <center>
+                                <div class="col-sm-6" id="tableRowConut" hidden></div>
+                            </center>
+                            <div class="col-sm-6" id="tableSearch" hidden></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 mb-3">
+                                <table id="myTable" class="table data-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" colspan="2" class="text-center"><h5>User Information :-</h5></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                        <tr>
+                                            <td> First Name : </td>
+                                            <td>{{ order.fname }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td> Last Name : </td>
+                                            <td>{{ order.lname }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td> Email Name : </td>
+                                            <td>{{ order.email }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td> Phone Number : </td>
+                                            <td>{{ order.phone }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td> Delhivery Address : </td>
+                                            <td>{{ order.address }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <table id="myTable" class="table data-table dataTable no-footer">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" colspan="2" class="text-center"><h5>Product Details :-</h5></th>
+                                           
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        
+                                        <tr>
+                                            <td> Product Image : </td>
+                                            <td><img src="{{MEDIA_ROOT}}/{{order.product.pimage}}" alt="image"></td>
+                                        </tr>
+                                        <tr>
+                                            <td> Product Name : </td>
+                                            <td>{{ order.product.pname }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td> Product Weight : </td>
+                                            <td>{{ order.weight }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td> Product Price : </td>
+                                            <td>{{ order.price }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td> Product Quantity : </td>
+                                            <td>{{ order.quantity }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td> Message On Cake : </td>
+                                            <td>{{ order.message }}</td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- main-content -->
+
+<div class="main-content">
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+<!-- main-content -->
+<!-- <div class=" main-content">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="panel mb-g">
+                                <div class="panel-heading">
+                                    <h3>View Order Full Details For {{ user_profile.username }}</h3>
+                                </div>
+                                <div class="panel-body">
+
+                                    <form action="" method="post" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <div class="panel-body">
+                                            <u>
+                                                <h3>User Information :</h3>
+                                            </u>
+                                            <div class="add-product">
+
+                                                <div class="row g-lg-4 g-2 align-items-center">
+                                                    <div class="col-sm-4">
+                                                        <label for="AddProduct">First Name :</label>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" id="ProductName"
+                                                            value="{{ user_profile.email }}"
+                                                            class="form-control form-control-lg" disabled />
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <label for="AddProduct">Last Name :</label>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        {{ orders.pimage.url }}
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="btn-box justify-content-end">
+                                                            <input type="reset" class="btn btn-secondary" value="Reset">
+                                                            <input type="submit" value="Add" class="btn btn-primary">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+<!-- main-content -->

@@ -1,0 +1,409 @@
+{% load static %}
+{% load custom_filters %}
+
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>order_page</title>
+	<!-- Bootstrap -->
+	<link href="{% static '/static_user/css/bootstrap.css' %}" rel="stylesheet">
+	<link href="{% static '/static_user/css/fontawesome_all.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static '/static_user/css/fonts.css' %}" rel="stylesheet">
+	<link rel="icon" href="{% static '/static_user/images/logo.png' %}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+		integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="{% static '/static_user/css/owl.carousel.css' %}" rel="stylesheet">
+	<link href="{% static '/static_user/css/owl.theme.default.css' %}" rel="stylesheet">
+	<link href="{% static '/static_user/css/stylesheet.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static '/static_user/css/responsive.css' %}" rel="stylesheet" type="text/css">
+	<!-- CSS -->
+	<link rel="stylesheet" href="{% static '/static_user/style.css' %}">
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+		integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+		integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/ all.min.css"
+		integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+	<!-- Bootstrap JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></script>
+	<script src="https://stackpath.bootstrapcdn.com/font-awesome/6.5.1/css/all.min.css"></script>
+
+	<!-- Ajax File -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<script>
+		(function (d) {
+			var config = {
+				kitId: 'nzt8uel',
+				scriptTimeout: 3000,
+				async: true
+			},
+				h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+		})(document);
+	</script>
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- HEADER_START -->
+
+		<header id="header">
+			<div class="header-hp header_change_op">
+				<div class="container">
+					<div class="row">
+						<div class="col header-in-hp">
+							<div class="header-left-hp">
+								<div class="logo-hp">
+									<a href="#"><img src="{% static '/static_user/images/logo.png' %}" alt="" /></a>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="header-right-hp"
+								>
+								<div class="mobile-menu-hp">
+									<a href="javascript:void(0)">
+										<div class="menu-toggle-btn-hp">
+											<span></span>
+											<span></span>
+											<span></span>
+										</div>
+									</a>
+								</div>
+								<div class="navigation-hp">
+									<nav class="navbar navbar-expand-lg navbar-light">
+										<div class="collapse navbar-collapse navigation-main-hp"
+											id="navbarSupportedContent">
+											<ul class="navbar-nav ml-auto">
+												{% for menu in viewmenu %}                                              																						
+                                                <li><a href="{% url menu.menuurl %}">{{ menu.menuname }}</a></li>
+                                            {% endfor %}
+											</ul>
+										</div>
+									</nav>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</header>
+
+		<!-- HEADER_END -->
+
+		<!-- CONTAIN_START -->
+		<!-- CONTAIN_START -->
+		<section id="contain">
+			<div class="order_block_op" style="background: url(/static/static_user/images/bgbg.jpg);">
+				<div class="container">
+					<div class="row">
+						<div class="col order_block_in_op">
+							<div class="order_middle_op">
+								{% if messages %}
+								<div class="container mt-3">
+									{% for message in messages %}
+									<div class="alert alert-{{ message.tags }} alert-dismissible fade show"
+										role="alert">
+										{{ message }}
+										<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									{% endfor %}
+								</div>
+								{% endif %}
+								<form id="add-to-cart-form"
+									action="{% url 'addtocart' user_id=user_id product_id=product_id %}" method="post"
+									id="add_to_cart_form">
+									{% csrf_token %}
+									<div class="order_top_op">
+										<input type="hidden" value="{{ viewpd.id }}" class="proud_id" name="product_id">
+										<div class="order_left_op">
+											<div class="order_left_img_op">
+												<img src="{{ viewpd.pimage.url }}" alt="{{ viewpd.pimage }}" />
+											</div>
+										</div>
+										<div class="order_right_op">
+
+											<div class="order_right_title_op">
+												{{ viewpd.pname }}
+											</div>
+											<div class="order_right_info_op">
+												{{viewpd.pdesc}}
+											</div>
+
+											<input type="hidden" name="selected_price" id="selected_price"
+												value="{{ selected_price }}">
+											<div class="order_right_price_op">
+												{% if selected_weight %}
+												{% if selected_weight == '500gm' %}
+												{{ prices.500gm }}
+												{% elif selected_weight == '1kg' %}
+												{{ prices.1kg }}
+												{% elif selected_weight == '2kg' %}
+												{{ prices.2kg }}
+												{% elif selected_weight == '3kg' %}
+												{{ prices.3kg }}
+												{% elif selected_weight == '4kg' %}
+												{{ prices.4kg }}
+												{% elif selected_weight == '5kg' %}
+												{{ prices.5kg }}
+												{% elif selected_weight == '6kg' %}
+												{{ prices.6kg }}
+												{% endif %}
+												{% else %}
+												{{ prices.500gm }}
+												{% endif %}
+												<span>Tax Included.</span>
+											</div>
+
+
+											<input type="hidden" name="selected_weight" id="selected_weight"
+												value="{{ selected_weight }}">
+											<div class="order_right_weight_title_op">
+												WEIGHT <span>*</span>
+											</div>
+											<div class="order_right_weight_op">
+												{% for weight in weights %}
+												<div class="order_right_weight_btn_op" data-weight="{{ weight }}"
+													data-price="{{ prices|get_value:weight }}">
+													<a href="#" class="weight_button">{{ weight }} GMS </a>
+												</div>
+												{% endfor %}
+
+											</div>
+
+											<div class="order_right_input_op">
+												<input type="text" placeholder="Message on cake (Optional)"
+													name="message">
+											</div>
+
+
+											<div class="order_right_btn_op">
+												<input type="submit" class="add_to_cart_btn" value="Add To Cart">
+												<!-- <a class="add_to_cart_btn" href="{% url 'addtocart' user_id=user_id product_id=product_id %}">Add to Cart</a> -->
+
+												<!-- <button type="submit" class="btn" id="add_to_cart_btn" >Add to Cart</button> -->
+											</div>
+										</div>
+									</div>
+								</form>
+								<!-- <script>
+									$(document).ready(function() {
+										$('#add-to-cart-form').on('submit', function(e) {
+											e.preventDefault();
+											
+											// Get selected weight and price
+											var selectedWeight = $('#selected_weight').val();
+											var selectedPrice = $('#selected_price').val();
+											
+											// Check if weight is selected
+											if (!selectedWeight) {
+												alert('Please select a weight.');
+												return;
+											}
+							
+											// Make AJAX request
+											$.ajax({
+												type: 'POST',
+												url: $(this).attr('action'),
+												data: $(this).serialize(),
+												success: function(response) {
+													// Display the response message as a popup
+													alert(response.message);
+							
+													// Optionally, you can handle success or error differently
+													if (response.status === "success") {
+														// For example, you can redirect to the cart page if needed
+														window.location.href = "/cart_page";
+													}
+												},
+												error: function(response) {
+													alert("An error occurred. Please try again.");
+												}
+											});
+										});
+									});
+								</script> -->
+								<div class="order_ans_op">
+									NEED HELP?
+								</div>
+								<div class="order_qus_op">
+									For design modification or any query please feel free to reach us out.
+								</div>
+								<div class="order_num_op">
+									<a href="#">
+										<svg xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+											<path
+												d="M92.1 254.6c0 24.9 7 49.2 20.2 70.1l3.1 5-13.3 48.6L152 365.2l4.8 2.9c20.2 12 43.4 18.4 67.1 18.4h.1c72.6 0 133.3-59.1 133.3-131.8c0-35.2-15.2-68.3-40.1-93.2c-25-25-58-38.7-93.2-38.7c-72.7 0-131.8 59.1-131.9 131.8zM274.8 330c-12.6 1.9-22.4 .9-47.5-9.9c-36.8-15.9-61.8-51.5-66.9-58.7c-.4-.6-.7-.9-.8-1.1c-2-2.6-16.2-21.5-16.2-41c0-18.4 9-27.9 13.2-32.3c.3-.3 .5-.5 .7-.8c3.6-4 7.9-5 10.6-5c2.6 0 5.3 0 7.6 .1c.3 0 .5 0 .8 0c2.3 0 5.2 0 8.1 6.8c1.2 2.9 3 7.3 4.9 11.8c3.3 8 6.7 16.3 7.3 17.6c1 2 1.7 4.3 .3 6.9c-3.4 6.8-6.9 10.4-9.3 13c-3.1 3.2-4.5 4.7-2.3 8.6c15.3 26.3 30.6 35.4 53.9 47.1c4 2 6.3 1.7 8.6-1c2.3-2.6 9.9-11.6 12.5-15.5c2.6-4 5.3-3.3 8.9-2s23.1 10.9 27.1 12.9c.8 .4 1.5 .7 2.1 1c2.8 1.4 4.7 2.3 5.5 3.6c.9 1.9 .9 9.9-2.4 19.1c-3.3 9.3-19.1 17.7-26.7 18.8zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM148.1 393.9L64 416l22.5-82.2c-13.9-24-21.2-51.3-21.2-79.3C65.4 167.1 136.5 96 223.9 96c42.4 0 82.2 16.5 112.2 46.5c29.9 30 47.9 69.8 47.9 112.2c0 87.4-72.7 158.5-160.1 158.5c-26.6 0-52.7-6.7-75.8-19.3z" />
+										</svg>
+										9560804738
+									</a>
+								</div>
+							</div>
+
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+
+		</section>
+		<!-- CONTAIN_END -->
+
+		<!-- FOOTER_START -->
+		<div class="footer" style="background: url({{footerimg.fimage.url}}) no-repeat center center; background-size:100%;">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col footer_in_hp">
+						<div class="footer_middle_hp">
+							<div class="footer_icons_hp">
+								<div class="footer_icons_img_hp">
+									<a href="https://www.instagram.com/rinkus_cakery?igsh=MXFlMWp2cG5rNTczdw%3D%3D&utm_source=qr">
+										<svg xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+											<path
+												d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+											</path>
+										</svg>
+									</a>
+								</div>
+								<div class="footer_icons_img_hp">
+									<a href="https://www.facebook.com/rinkuscakery">
+										<svg xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+											<path
+												d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z">
+											</path>
+										</svg>
+									</a>
+								</div>
+								<div class="footer_icons_img_hp">
+									<a href="https://api.whatsapp.com/send?phone=+91 9099387462&amp;text=Hi Team" target="_blank">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+									</a>
+								</div>
+								
+							</div>
+							<div class="footer_copyright_hp">
+								The Rinku's Cakery ©2024
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<!-- FOOTER_END -->
+
+	</div>
+
+	<script src="{% static '/static_user/js/jquery-3.5.1.slim.min.js' %}" type="text/javascript"></script>
+	<script src="{% static '/static_user/js/jquery.min.js' %}"></script>
+	<script src="{% static '/static_user/js/popper.min.js' %}" type="text/javascript"></script>
+	<script src="{% static '/static_user/js/bootstrap.min.js' %}" type="text/javascript"></script>
+	<script src="{% static '/static_user/js/owl.carousel.min.js' %}"></script>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+	<script src="{% static '/static_user/js/custom.js' %}"></script>
+
+
+	<script>
+		$(document).ready(function () {
+			$('.order_right_weight_btn_op').click(function () {
+				$('.order_right_weight_btn_op').removeClass('active');
+				$(this).addClass('active');
+				var selectedWeight = $(this).data('weight');
+				var selectedPrice = $(this).data('price');
+				$('#selected_weight').val(selectedWeight);
+				$('#selected_price').val(selectedPrice);
+
+
+			});
+			$('#add_to_cart_btn').click(function () {
+				var productID = $('.proud_id').val();
+				var selectedWeight = $('#selected_weight').val();
+				var selectedPrice = $('#selected_price').val();
+				console.log("Product ID:", productID);
+				console.log("Selected Weight for Cart:", selectedWeight);
+				console.log("Selected Price for Cart:", selectedPrice);
+				var addToCartURL = "/addtocart/" + productID + "/";
+				$('#add_to_cart_form').attr('action', addToCartURL);
+				$('#add_to_cart_form').submit();
+			});
+		});
+	</script>
+
+	<script>
+		$(document).ready(function () {
+			$('.order_right_weight_btn_op').click(function () {
+				$('.order_right_weight_btn_op').removeClass('active');
+				$(this).addClass('active');
+				var selectedWeight = $(this).data('weight');
+				var selectedPrice = $(this).data('price');
+				$('.order_right_price_op').text(selectedPrice);
+			});
+		});
+	</script>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			var messages = document.querySelectorAll('.alert');
+			if (messages.length > 0) {
+				messages.forEach(function (message) {
+					// Assuming you're using Bootstrap for modals
+					// Display the alert as a modal or popup
+					alert(message.textContent.trim());
+				});
+			}
+		});
+	</script>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

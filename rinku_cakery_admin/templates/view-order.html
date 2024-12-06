@@ -1,0 +1,64 @@
+
+{% extends "base.html" %} {% load static %} {% block content %}
+
+        <!-- main-content -->
+        <div class="main-content">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12">
+                    <div class="panel mb-g">
+                        <div class="panel-heading">
+                            <h3> View Order</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="ecommerce-table">
+                                <div class="table-top-control mb-g">
+                                    <div class="row g-lg-4 g-md-3 g-sm-2 g-3">
+                                        <div class="col-sm-6" id="tableRowConut"></div>
+                                        <div class="col-sm-6" id="tableSearch"></div>
+                                    </div>
+                                </div>
+                                <table id="myTable" class="table data-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">First Name</th>
+                                            <th scope="col">Last Name</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Phone</th>
+                                            <th scope="col">Delivery Address</th>
+                                            <th scope="col">Product Name</th>
+                                            <th scope="col">Order Time</th> 
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                       {% for order in orders %} 
+                                        <tr>
+                                            <td>{{order.id}}</td>
+                                            <td>{{order.fname}}</td>
+                                            <td>{{order.lname}}</td>
+                                            <td>{{order.email}}</td>
+                                            <td>{{order.phone}}</td>
+                                            <td>{{order.address}}</td>
+                                            <td>{{order.product.pname }}</td>
+                                            <td> {{order.date}}</td>
+                                            <td>
+                                                <div class="btn-box">
+                                                    <a href="/order_fulldetails/{{ order.user.id }}/{{ order.id }}" class="text-white btn btn-sm btn-secondary"><i class="bi bi-eye-fill"></a></i>
+                                                    <a href="/delete_orders/{{ order.id }}" class="text-white btn btn-sm btn-danger"><i class="bi bi-trash"></a></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                       {% endfor %}
+                                        
+                                    </tbody>
+                                </table>
+                                <div class="table-bottom-control"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main-content -->
+        {% endblock %}

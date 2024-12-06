@@ -1,0 +1,81 @@
+
+
+@font-face {
+    font-family: 'Mr Leopolde';
+    src: url('../fonts/MrLeopolde.eot');
+    src: url('../fonts/MrLeopolde.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MrLeopolde.woff2') format('woff2'),
+        url('../fonts/MrLeopolde.woff') format('woff'),
+        url('../fonts/MrLeopolde.ttf') format('truetype'),
+        url('../fonts/MrLeopolde.svg#MrLeopolde') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Calluna';
+    src: url('../fonts/Calluna-Regular.eot');
+    src: url('../fonts/Calluna-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Calluna-Regular.woff2') format('woff2'),
+        url('../fonts/Calluna-Regular.woff') format('woff'),
+        url('../fonts/Calluna-Regular.ttf') format('truetype'),
+        url('../fonts/Calluna-Regular.svg#Calluna-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'NebraskaMedium DB';
+    src: url('../fonts/NebraskaMedium-Regular.eot');
+    src: url('../fonts/NebraskaMedium-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NebraskaMedium-Regular.woff2') format('woff2'),
+        url('../fonts/NebraskaMedium-Regular.woff') format('woff'),
+        url('../fonts/NebraskaMedium-Regular.ttf') format('truetype'),
+        url('../fonts/NebraskaMedium-Regular.svg#NebraskaMedium-Regular') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/JosefinSans-Bold.eot');
+    src: url('../fonts/JosefinSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/JosefinSans-Bold.woff2') format('woff2'),
+        url('../fonts/JosefinSans-Bold.woff') format('woff'),
+        url('../fonts/JosefinSans-Bold.ttf') format('truetype'),
+        url('../fonts/JosefinSans-Bold.svg#JosefinSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/JosefinSans-SemiBold.eot');
+    src: url('../fonts/JosefinSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/JosefinSans-SemiBold.woff2') format('woff2'),
+        url('../fonts/JosefinSans-SemiBold.woff') format('woff'),
+        url('../fonts/JosefinSans-SemiBold.ttf') format('truetype'),
+        url('../fonts/JosefinSans-SemiBold.svg#JosefinSans-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/JosefinSans-Regular.eot');
+    src: url('../fonts/JosefinSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/JosefinSans-Regular.woff2') format('woff2'),
+        url('../fonts/JosefinSans-Regular.woff') format('woff'),
+        url('../fonts/JosefinSans-Regular.ttf') format('truetype'),
+        url('../fonts/JosefinSans-Regular.svg#JosefinSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

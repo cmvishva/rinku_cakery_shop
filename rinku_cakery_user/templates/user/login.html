@@ -1,0 +1,140 @@
+{% load static %}
+<!-- login  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Rinku's Cakery - Log In</title>
+	<!-- Bootstrap -->
+    <link rel="icon" href="{% static '/static_user/images/logo.png' %}">
+	<link href="{% static '/static_user/css/bootstrap.css' %}" rel="stylesheet">
+	<link href="{% static '/static_user/css/fontawesome_all.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static '/static_user/css/fonts.css' %}" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+	<link href="{% static '/static_user/css/owl.carousel.css' %}" rel="stylesheet">
+	<link href="{% static '/static_user/css/owl.theme.default.css' %}" rel="stylesheet">
+	<link href="{% static '/static_user/css/stylesheet.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static '/static_user/css/responsive.css' %}" rel="stylesheet" type="text/css">
+	<script>
+		(function (d) {
+			var config = {
+				kitId: 'nzt8uel',
+				scriptTimeout: 3000,
+				async: true
+			},
+				h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+		})(document);
+	</script>
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body style="background-image: url(static/static_user/images/loginbg1.jpg); background-size: cover; background-repeat: no-repeat;">
+
+    <div class="account-home-btn d-none d-sm-block">
+        <a href="" class="text-white"><i class="ri-home-2-fill"></i></a>
+    </div>
+
+    <section class="bg-account-pages vh-100">
+        
+        <div class="display-table">
+            <div class="display-table-cell">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5 col-md-6">
+                            <div class="card account-card">
+                                <div class="card-body">
+                                    <div class="text-center mt-3">
+                                        <h3 class="fw-bold"><a href="" class="text-dark text-uppercase account-pages-logo">Rinku's Cakery</a>
+                                        </h3>
+                                        <p class="text-muted">Login to continue to Rinku's Cakery.</p>
+                                    </div>
+                                    <div class="p-4">
+                                        
+                                        {% if messages %}
+                                            <div id="alerts-container">
+                                                {% for message in messages %}
+                                                    <div class="alert alert-error {% if message.tags %}{{ message.tags }}{% endif %}">
+                                                        {{ message }}   
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+    
+                                            <script>
+                                                // Auto remove alerts after 5 seconds (5000 milliseconds)
+                                                setTimeout(function() {
+                                                    var alerts = document.querySelectorAll('.alert');
+                                                    alerts.forEach(function(alert) {
+                                                        alert.style.display = 'none';
+                                                    });
+                                                }, 4000);  // Adjust the timeout duration as needed
+                                            </script>
+                                        {% endif %}
+                                        
+                                        <form action="{% url 'userlogin' %}" method="post">
+                                          {% csrf_token %}
+                                            <div class="form-group">
+                                                <label for="username">Username</label>
+                                                <input type="text" class="form-control" id="username" name="username"
+                                                    placeholder="Enter username" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="userpassword">Password</label>
+                                                <input type="password" class="form-control" id="userpassword"
+                                                    placeholder="Enter password" required name="password">
+                                            </div>
+
+                                            <div class="d-grid mt-3">
+                                                <button type="submit" class="btn btn-primary">Log In</button>
+                                            </div>
+                                            
+                                            <div class="mt-4 mb-0 text-center">
+                                              <p>
+                                                Don't have an account? <a href="/user_register">Sign up</a> here
+                                              </p>
+                                            </div>
+                                            
+                                            <div class="mt-2 mb-0 text-center">
+                                                <a href="/forgot_password" class="text-dark"><i
+                                                        class="ri-lock-2-fill"></i> Forgot your password?</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end card -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+                    <!-- end row -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end account-pages  -->
+
+    <!-- js link -->
+    <script src="{% static '/static_user/js/bootstrap.bundle.min.js' %}"></script>
+    <!-- bootstarp link -->
+    <script src="{% static '/static_user/js/app.js' %}"></script>
+    <!-- main js -->
+    <!-- js link -->
+</body>
+
+</html>
+
+ 

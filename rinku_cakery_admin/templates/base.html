@@ -1,0 +1,432 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rinku's Cakery Admin Panel</title>
+
+    <link rel="shortcut icon" href="{% static '/static_admin/assets/images/logo.jpg' %}">
+    <link rel="stylesheet" href="{% static '/static_admin/assets/vendor/bootstrap-icon/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static '/static_admin/assets/vendor/css/jquery.dataTables.min.css' %}">
+    <link rel="stylesheet" href="{% static '/static_admin/assets/vendor/css/responsive.bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/static_admin/assets/vendor/css/simplebar.css' %}">
+    <link rel="stylesheet" href="{% static '/static_admin/assets/vendor/css/bootstrap.min.css' %}">
+    <link id="styles" rel="stylesheet" href="{% static '/static_admin/assets/css/style.css' %}">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <!-- header -->
+        <div class="header">
+            <div class="top-header">
+                <div class="row justify-content-between">
+                    <div class="col-xl-3 col-lg-4 col-sm-4 col-6">
+                        <div class="d-flex align-items-center">
+                            <div class="logo">
+                                <div class="logo-big">
+                                    <a href="#">
+                                        <h6><I>Rinku's Cakery</I></h6>
+                                    </a>
+                                </div>
+                                <div class="logo-small">
+                                    <a href="#">
+                                        <img src="{% static '/static_admin/assets/images/logo.jpg' %}" id="logoSmall" alt="Logo small">
+                                    </a>
+                                </div>
+                            </div>
+                            <button class="sidebar-collapse">
+                                <i class="bi bi-list"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-8 col-sm-8 col-6">
+                        <div class="top-right">
+                            <nav class="navbar navbar-expand">
+                                <div class="navbar-collapse" id="navbarSupportedContent">
+                                    <form class="nav-form d-flex">
+                                        <input type="search" placeholder="Search" aria-label="Search" disabled>
+                                        <button type="submit" disabled><i class="bi bi-search"></i></button>
+                                    </form>
+
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="horizontal-menu bg-primary">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <nav class="navbar navbar-expand-lg navbar-dark">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="dashboardDropdown"
+                                            role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                            aria-expanded="false">
+                                            Dashboard
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="dashboardDropdown">
+                                            <li><a href="{% url 'dashboard' %}" class="dropdown-item">Dashboard</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="ecommerceDropdown"
+                                            role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                            aria-expanded="false">
+                                            Menu
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="ecommerceDropdown">
+                                        
+                                            <li><a href="{% url 'view_main_menu' %}" class="dropdown-item">View Menu</a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="ecommerceDropdown"
+                                            role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                            aria-expanded="false">
+                                            Slider
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="ecommerceDropdown">
+                                            <li><a href="{% url 'add_slider' %}" class="dropdown-item">Add Slider</a>
+                                            </li>
+                                            <li><a href="{% url 'view_slider' %}" class="dropdown-item">View Slider</a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="ecommerceDropdown"
+                                            role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                            aria-expanded="false">
+                                            Hygiene Section Bg
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="ecommerceDropdown">
+                                            
+                                            <li><a href="{% url 'add_hygiene_sec_bg_img' %}" class="dropdown-item">Add
+                                                    Hygiene Section Bg</a>
+                                            </li>
+                                            <li><a href="{% url 'view_hygiene_sec_bg_img' %}" class="dropdown-item">View
+                                                    Hygiene Section Bg</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="ecommerceDropdown"
+                                            role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                            aria-expanded="false">
+                                            Footer
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="ecommerceDropdown">
+                                            
+                                            <li><a href="{% url 'addfooter' %}" class="dropdown-item">Add Footer
+                                                    Image</a>
+                                            </li>
+                                            <li><a href="{% url 'viewfooter' %}" class="dropdown-item">View Footer
+                                                    Image</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="ecommerceDropdown"
+                                            role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                            aria-expanded="false">
+                                            Products
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="ecommerceDropdown">
+                                            <li><a href="{% url 'add_product' %}" class="dropdown-item">Add Product</a>
+                                            </li>
+                                            <li><a href="{% url 'view_product' %}" class="dropdown-item">View
+                                                    Products</a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="AboutPageDropdown"
+                                            role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                            aria-expanded="false">
+                                            About_Page
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="AboutPageDropdown">
+                                            <li><a href="{% url 'add_about_header_img' %}" class="dropdown-item">Add
+                                                    About Header Image</a></li>
+                                            <li><a href="{% url 'view_about_header_img' %}" class="dropdown-item">View
+                                                    About Header Image</a></li>
+                                            <li><a href="{% url 'add_about_sec1' %}" class="dropdown-item">Add About
+                                                    Sec1</a></li>
+                                            <li><a href="{% url 'view_about_sec1' %}" class="dropdown-item">View About
+                                                    Sec1</a></li>
+                                            <li><a href="{% url 'add_about_sec2' %}" class="dropdown-item">Add About
+                                                    Sec2</a></li>
+                                            <li><a href="{% url 'view_about_sec2' %}" class="dropdown-item">View About
+                                                    Sec2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="ecommerceDropdown"
+                                            role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                            aria-expanded="false">
+                                            Cart Page
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="ecommerceDropdown">
+                                            
+                                            <li><a href="{% url 'add_cart_header_img' %}" class="dropdown-item">Add Cart
+                                                    Page Header Image</a></li>
+                                            <li><a href="{% url 'view_cart_header_img' %}" class="dropdown-item">View
+                                                    Cart Page Header Image</a></li>
+                                        </ul>
+                                    </li>
+                                    
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="ecommerceDropdown"
+                                            role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Orders
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="ecommerceDropdown">
+                                            <li><a href="{% url 'view_orders' %}" class="dropdown-item">View Orders</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="ecommerceDropdown"
+                                            role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                            aria-expanded="false">
+                                            Contact Page
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="ecommerceDropdown">
+                                            <li><a href="{% url 'add_contact_header_img' %}" class="dropdown-item">Add
+                                                    Contact Page Header Image</a></li>
+                                            <li><a href="{% url 'view_contact_header_img' %}" class="dropdown-item">View
+                                                    Contact Page Header Image</a></li>
+                                            <li><a href="{% url 'add_contact_middele_img' %}" class="dropdown-item">Add
+                                                    Contact Page Middele Image</a></li>
+                                            <li><a href="{% url 'view_contact_middele_img' %}"
+                                                    class="dropdown-item">View Contact Page Middele Image</a></li>
+
+                                            <li><a href="{% url 'add_contact_address_info' %}" class="dropdown-item">Add Contact Address </a></li>
+                                            <li><a href="{% url 'view_contact_address_info' %}" class="dropdown-item">View Contact Address </a></li>
+                                            <li><a href="{% url 'view_contact_messages' %}" class="dropdown-item">View Contact Message </a></li>
+
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="ecommerceDropdown"
+                                            role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                            aria-expanded="false">
+                                            Authentication
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="ecommerceDropdown">
+                                            <li><a href="{% url 'admin_change_password' %}" class="dropdown-item">Change
+                                                    Password</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header -->
+
+        <!-- main sidebar -->
+        <div class="fixed-sidebar sidebar-mini" data-simplebar>
+            <div class="profile">
+                <div class="sidebar-profile">
+                    <button id="profileClose"><i class="bi bi-x-circle-fill"></i></button>
+                    <div class="part-img">
+                        <img src="{% static '/static_admin/assets/images/logo.png' %}" alt="user">
+                    </div>
+                    <div class="part-txt">
+                        <a href="#" class="name">Rinku's Cakery</a>
+                        <span>Admin</span>
+                        <ul>
+                            <li><a href="admin_logout" data-bs-toggle="tooltip" data-bs-placement="top" tabindex="0"
+                                    title="Log out"><i class="bi bi-power"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- sidebar menu -->
+            <div class="menu">
+                <div class="sidebar-menu">
+                    <ul>
+                        <li class="sidebar-title"><span>Menu</span></li>
+                        <li class="sidebar-item has-sub">
+                            <a role="button" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right"
+                                title="Dashboard" tabindex="0"><i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'dashboard' %}" class="sub-menu-item">Dashboard</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item has-sub">
+                            <a role="button" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right"
+                                title="Menu" tabindex="0"><i class="bi bi-menu-button-wide-fill"></i>
+                                <span>Menu</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'view_main_menu' %}" class="sub-menu-item">View Menu</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="sidebar-item has-sub">
+                            <a role="button" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right"
+                                title="Slider" tabindex="0"><i class="bi bi-sliders"></i> <span>Slider</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'add_slider' %}" class="sub-menu-item">Add Slider</a></li>
+                                <li><a href="{% url 'view_slider' %}" class="sub-menu-item">View Slider</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="sidebar-item has-sub">
+                            <a role="button" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right"
+                                title="Footer" tabindex="0"><i class="bi bi-record-circle-fill"></i> <span> Hygiene
+                                    Section Bg</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'add_hygiene_sec_bg_img' %}" class="sub-menu-item">Add Hygiene
+                                        Section Bg</a></li>
+                                <li><a href="{% url 'view_hygiene_sec_bg_img' %}" class="sub-menu-item">View Hygiene
+                                        Section Bg</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="sidebar-item has-sub">
+                            <a role="button" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right"
+                                title="Footer" tabindex="0"><i class="bi bi-border-width"></i> <span>Footer</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'addfooter' %}" class="sub-menu-item">Add Footer Image</a></li>
+                                <li><a href="{% url 'viewfooter' %}" class="sub-menu-item">View Footer Image</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="sidebar-item has-sub">
+                            <a role="button" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right"
+                                title="Product" tabindex="0"><i class="bi bi-basket2-fill"></i> <span>Product</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'add_category' %}" class="sub-menu-item">Add Category</a></li>
+                                <li><a href="{% url 'view_category' %}" class="sub-menu-item">View Category</a></li>
+                                <li><a href="{% url 'add_product' %}" class="sub-menu-item">Add Product</a></li>
+                                <li><a href="{% url 'view_product' %}" class="sub-menu-item">View Products</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item has-sub">
+                            <a role="button" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right"
+                                title="About_Page" tabindex="0"><i class="bi bi-file-person"></i>
+                                <span>About_Page</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'add_about_header_img' %}" class="sub-menu-item">Add About Header
+                                        Image</a></li>
+                                <li><a href="{% url 'view_about_header_img' %}" class="sub-menu-item">View About Header
+                                        Image</a></li>
+                                <li><a href="{% url 'add_about_sec1' %}" class="sub-menu-item">Add About Sec1</a></li>
+                                <li><a href="{% url 'view_about_sec1' %}" class="sub-menu-item">View About Sec1</a></li>
+                                <li><a href="{% url 'add_about_sec2' %}" class="sub-menu-item">Add About Sec2</a></li>
+                                <li><a href="{% url 'view_about_sec2' %}" class="sub-menu-item">View About Sec2</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item has-sub">
+                            <a role="button" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right"
+                                title="Cart Page" tabindex="0"><i class="bi bi-basket2-fill"></i> <span>Cart Page
+                                </span></a>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'add_cart_header_img' %}" class="sub-menu-item">Add Cart Header Img</a></li>
+                                <li><a href="{% url 'view_cart_header_img' %}" class="sub-menu-item">View Cart Header Img</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="sidebar-item has-sub">
+                            <a role="button" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right"
+                                title="Orders" tabindex="0"><i class="bi bi-basket2-fill"></i> <span>Orders</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'view_orders' %}" class="sub-menu-item">View Orders</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item has-sub">
+                            <a role="button" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right"
+                                title="Contact Page " tabindex="0"><i class="bi bi-person-lines-fill"></i> <span>Contact
+                                    Page
+                                </span></a>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'add_contact_header_img' %}" class="sub-menu-item">Add Contact
+                                        Header
+                                        Img</a></li>
+
+                                <li><a href="{% url 'view_contact_header_img' %}" class="sub-menu-item">View Contact
+                                        Header
+                                        Img</a></li>
+
+                                <li><a href="{% url 'add_contact_middele_img' %}" class="sub-menu-item">Add Contact
+                                        Middele
+                                        Img</a></li>
+                                <li><a href="{% url 'view_contact_middele_img' %}" class="sub-menu-item">View Contact
+                                        Middele Img</a></li>
+
+                                <li><a href="{% url 'add_contact_address_info' %}" class="sub-menu-item">Add Contact Address </a></li>
+                                <li><a href="{% url 'view_contact_address_info' %}" class="sub-menu-item">View Contact Address </a></li>
+                                <li><a href="{% url 'view_contact_messages' %}" class="sub-menu-item">View Contact Message </a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item has-sub">
+                            <a role="button" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right"
+                                title="Authentication" tabindex="0"><i class="bi bi-person-badge-fill"></i>
+                                <span>Authentication</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'admin_change_password' %}" class="sub-menu-item">Change
+                                        Password</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <!-- sidebar menu -->
+        </div>
+        <!-- main sidebar -->
+
+        {% block content %}
+
+        <!-- MAIN CONTENT GOES HEARE -->
+
+        {% endblock %}
+
+
+    </div>
+
+
+    <script src="{% static '/static_admin/assets/vendor/js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static '/static_admin/assets/vendor/js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static '/static_admin/assets/vendor/js/dataTables.responsive.min.js' %}"></script>
+    <script src="{% static '/static_admin/assets/vendor/js/simplebar.min.js' %}"></script>
+    <script src="{% static '/static_admin/assets/vendor/js/dragula.min.js' %}"></script>
+    <script src="{% static '/static_admin/assets/vendor/js/bs-dropzone.min.js' %}"></script>
+    <script src="{% static '/static_admin/assets/vendor/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static '/static_admin/assets/js/main.js' %}"></script>
+    <script src="{% static '/static_admin/assets/js/datatables-init.js' %}"></script>
+</body>
+
+</html>
